@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LevelUp - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <div class="max-w-2xl mx-auto p-6">
+      <h1 class="text-3xl font-bold mb-4">👋 Welcome back, Delano!</h1>
+
+      <!-- XP Progress -->
+      <div class="mb-6">
+        <p class="mb-1">Level: <span id="level">1</span></p>
+        <div class="w-full bg-gray-700 h-4 rounded">
+          <div id="xpBar" class="bg-green-400 h-4 rounded"
+            style="width: 20%"></div>
+        </div>
+        <p class="text-sm mt-1">XP: <span id="xp">20</span>/100</p>
+      </div>
+
+      <!-- Pomodoro Timer -->
+      <div class="mb-6">
+        <h2 class="text-xl font-semibold mb-2">⏳ Pomodoro Timer</h2>
+        <div class="bg-gray-800 p-4 rounded text-center">
+          <p id="timerDisplay" class="text-4xl font-bold mb-4">25:00</p>
+          <p id="pomodoroPrediction" class="mt-2 text-gray-300 italic"></p>
+          <p class="mb-2">🍅 Completed Today: <span
+              id="pomodoroCount">0</span></p>
+          <div class="space-x-2">
+            <button onclick="startTimer()"
+              class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">Start</button>
+            <button onclick="resetTimer()"
+              class="bg-red-600 px-4 py-2 rounded hover:bg-red-700">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Daily Challenges -->
+      <div class="mb-4">
+        <h2 class="text-xl font-semibold mb-2">📋 Daily Challenges</h2>
+        <div class="flex mb-3">
+          <input id="newChallengeInput" type="text"
+            placeholder="Add a challenge..."
+            class="flex-1 p-2 rounded-l bg-gray-700 text-white focus:outline-none" />
+          <button onclick="addChallenge()"
+            class="bg-green-600 px-4 py-2 rounded-r hover:bg-green-700">➕</button>
+        </div>
+        <ul id="challengeList" class="space-y-2"></ul>
+      </div>
+
+      <!-- Motivation Feed -->
+      <div class="mt-8">
+        <h2 class="text-xl font-semibold mb-2">🔥 Today's Motivation</h2>
+        <div id="quoteBox"
+          class="bg-gray-800 p-4 rounded text-center italic text-yellow-300">
+          "Stay focused and trust the process."
+        </div>
+      </div>
+    </div>
