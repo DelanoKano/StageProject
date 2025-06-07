@@ -2,6 +2,22 @@
 let xp = parseInt(localStorage.getItem("xp")) || 20;
 let level = parseInt(localStorage.getItem("level")) || 1;
 
+function askUsername() {
+  let username = localStorage.getItem("username");
+  if (!username) {
+    username = prompt("Please enter your name:");
+    if (username) {
+      localStorage.setItem("username", username);
+    } else {
+      username = "Guest";
+    }
+  }
+  return username;
+}
+
+const username = askUsername();
+document.getElementById("welcomeUser").textContent = username;
+
 function updateUI() {
   document.getElementById("xp").textContent = xp;
   document.getElementById("level").textContent = level;
