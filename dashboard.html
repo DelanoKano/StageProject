@@ -7,28 +7,29 @@
     <script defer src="js/script.js"></script>
   </head>
   <body class="bg-gray-900 text-white font-sans text-xl">
-
-    <div class="max-w-2xl mx-auto p-8">
-      <h1 class="text-5xl font-bold mb-8">👋 Welcome back, <span
-          id="welcomeUser">Guest</span>!</h1>
+    <div class="max-w-3xl mx-auto p-8">
+      <h1 class="text-5xl font-bold mb-8 text-center">👋 Welcome back,
+        Delano!</h1>
 
       <!-- XP Progress -->
-      <div class="mb-10">
-        <p class="mb-2 text-2xl">Level: <span id="level">1</span></p>
+      <div class="mb-8">
+        <p class="mb-2 text-3xl">Level: <span id="level">1</span></p>
         <div class="w-full bg-gray-700 h-8 rounded">
           <div id="xpBar" class="bg-green-400 h-8 rounded"
             style="width: 20%"></div>
         </div>
-        <p class="text-lg mt-2">XP: <span id="xp">20</span>/100</p>
+        <p class="text-2xl mt-2">XP: <span id="xp">20</span>/100</p>
+
+        <p class="text-2xl mt-6 text-center">Pomodoros today: <span
+            id="pomodoroCountDisplay">0</span></p>
       </div>
 
       <!-- Pomodoro Timer -->
       <div class="mb-10">
-        <h2 class="text-4xl font-semibold mb-6">⏳ Pomodoro Timer</h2>
+        <h2 class="text-4xl font-semibold mb-4 text-center">⏳ Pomodoro
+          Timer</h2>
         <div class="bg-gray-800 p-8 rounded text-center">
-          <p id="timerDisplay" class="text-6xl font-bold mb-6">25:00</p>
-          <p id="pomodoroPrediction"
-            class="mt-4 text-gray-300 italic text-2xl"></p>
+          <p id="timerDisplay" class="text-7xl font-bold mb-8">25:00</p>
           <div class="space-x-6">
             <button onclick="startTimer()"
               class="bg-blue-600 px-8 py-4 rounded hover:bg-blue-700 text-2xl">Start</button>
@@ -39,28 +40,31 @@
       </div>
 
       <!-- Daily Challenges -->
-      <div class="mb-8">
-        <h2 class="text-4xl font-semibold mb-4">📋 Daily Challenges</h2>
-        <div class="flex mb-5">
+      <div class="mb-10">
+        <h2 class="text-4xl font-semibold mb-6 text-center">📋 Daily
+          Challenges</h2>
+        <div class="flex mb-6">
           <input id="newChallengeInput" type="text"
             placeholder="Add a challenge..."
-            class="flex-1 p-4 rounded-l bg-gray-700 text-white focus:outline-none text-xl" />
+            class="flex-1 p-4 rounded-l bg-gray-700 text-white focus:outline-none text-2xl" />
           <button onclick="addChallenge()"
-            class="bg-green-600 px-8 py-4 rounded-r hover:bg-green-700 text-2xl">➕</button>
+            class="bg-green-600 px-8 py-4 rounded-r hover:bg-green-700 text-3xl">➕</button>
         </div>
-        <ul id="challengeList" class="space-y-4 text-xl"></ul>
+        <ul id="challengeList" class="space-y-4 text-2xl"></ul>
       </div>
 
       <!-- Motivation Feed -->
       <div class="mt-12">
-        <h2 class="text-4xl font-semibold mb-4">🔥 Today's Motivation</h2>
+        <h2 class="text-4xl font-semibold mb-6 text-center">🔥 Today's
+          Motivation</h2>
         <div id="quoteBox"
-          class="bg-gray-800 p-6 rounded text-center italic text-yellow-300 text-2xl">
+          class="bg-gray-800 p-8 rounded text-center italic text-yellow-300 text-3xl">
           "Stay focused and trust the process."
         </div>
       </div>
     </div>
+
   </body>
 
   <footer class="text-center text-gray-500 mt-8">
-    <p class="text-sm">© 2025 LevelUp Motivation v1.6.5 © DelanoDaylinq</p>
+    <p class="text-sm">© 2025 LevelUp Motivation v1.6.6 © DelanoDaylinq</p>
