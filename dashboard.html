@@ -6,65 +6,65 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="js/script.js"></script>
   </head>
-  <body class="bg-gray-900 text-white font-sans text-xl">
-    <div class="max-w-3xl mx-auto p-8">
-      <h1 class="text-5xl font-bold mb-8 text-center">👋 Welcome back,
-        Delano!</h1>
+  <body class="bg-gray-900 text-white font-sans relative min-h-screen">
+
+    <button id="logoutBtn"
+      class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded absolute top-6 right-6">
+      Logout
+    </button>
+
+    <div class="max-w-2xl mx-auto p-6 pt-20">
+
+      <h1 id="welcomeMsg" class="text-4xl font-bold mb-6"></h1>
 
       <!-- XP Progress -->
-      <div class="mb-8">
-        <p class="mb-2 text-3xl">Level: <span id="level">1</span></p>
-        <div class="w-full bg-gray-700 h-8 rounded">
-          <div id="xpBar" class="bg-green-400 h-8 rounded"
+      <div class="mb-6">
+        <p class="mb-1">Level: <span id="level">1</span></p>
+        <div class="w-full bg-gray-700 h-4 rounded">
+          <div id="xpBar" class="bg-green-400 h-4 rounded"
             style="width: 20%"></div>
         </div>
-        <p class="text-2xl mt-2">XP: <span id="xp">20</span>/100</p>
-
-        <p class="text-2xl mt-6 text-center">Pomodoros today: <span
-            id="pomodoroCountDisplay">0</span></p>
+        <p class="text-sm mt-1">XP: <span id="xp">20</span>/100</p>
       </div>
 
       <!-- Pomodoro Timer -->
-      <div class="mb-10">
-        <h2 class="text-4xl font-semibold mb-4 text-center">⏳ Pomodoro
-          Timer</h2>
-        <div class="bg-gray-800 p-8 rounded text-center">
-          <p id="timerDisplay" class="text-7xl font-bold mb-8">25:00</p>
-          <div class="space-x-6">
+      <div class="mb-6">
+        <h2 class="text-2xl font-semibold mb-2">⏳ Pomodoro Timer</h2>
+        <div class="bg-gray-800 p-6 rounded text-center">
+          <p id="timerDisplay" class="text-6xl font-bold mb-4">25:00</p>
+          <p class="mb-2 text-xl">🍅 Completed Today: <span
+              id="pomodoroCount">0</span></p>
+          <div class="space-x-4">
             <button onclick="startTimer()"
-              class="bg-blue-600 px-8 py-4 rounded hover:bg-blue-700 text-2xl">Start</button>
+              class="bg-blue-600 px-6 py-3 rounded hover:bg-blue-700 text-lg">Start</button>
             <button onclick="resetTimer()"
-              class="bg-red-600 px-8 py-4 rounded hover:bg-red-700 text-2xl">Reset</button>
+              class="bg-red-600 px-6 py-3 rounded hover:bg-red-700 text-lg">Reset</button>
           </div>
         </div>
       </div>
 
       <!-- Daily Challenges -->
-      <div class="mb-10">
-        <h2 class="text-4xl font-semibold mb-6 text-center">📋 Daily
-          Challenges</h2>
-        <div class="flex mb-6">
+      <div class="mb-4">
+        <h2 class="text-2xl font-semibold mb-4">📋 Daily Challenges</h2>
+        <div class="flex mb-4">
           <input id="newChallengeInput" type="text"
             placeholder="Add a challenge..."
-            class="flex-1 p-4 rounded-l bg-gray-700 text-white focus:outline-none text-2xl" />
+            class="flex-1 p-4 rounded-l bg-gray-700 text-white text-lg focus:outline-none" />
           <button onclick="addChallenge()"
-            class="bg-green-600 px-8 py-4 rounded-r hover:bg-green-700 text-3xl">➕</button>
+            class="bg-green-600 px-6 py-3 rounded-r hover:bg-green-700 text-lg">➕</button>
         </div>
-        <ul id="challengeList" class="space-y-4 text-2xl"></ul>
+        <ul id="challengeList" class="space-y-3 text-lg"></ul>
       </div>
 
       <!-- Motivation Feed -->
-      <div class="mt-12">
-        <h2 class="text-4xl font-semibold mb-6 text-center">🔥 Today's
-          Motivation</h2>
+      <div class="mt-8">
+        <h2 class="text-2xl font-semibold mb-4">🔥 Today's Motivation</h2>
         <div id="quoteBox"
-          class="bg-gray-800 p-8 rounded text-center italic text-yellow-300 text-3xl">
-          "Stay focused and trust the process."
+          class="bg-gray-800 p-6 rounded text-center italic text-yellow-300 text-xl">
+          Stay focused and trust the process.
         </div>
       </div>
     </div>
 
-  </body>
-
-  <footer class="text-center text-gray-500 mt-8">
-    <p class="text-sm">© 2025 LevelUp Motivation v1.6.6 © DelanoDaylinq</p>
+    <footer class="text-center text-gray-500 mt-8">
+      <p class="text-sm">© 2025 LevelUp Motivation v2.0.1 © DelanoDaylinq</p>

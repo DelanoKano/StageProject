@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LevelUp - Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- <style>
+    body { background-color: #1a202c; color: white; }
+    </style> -->
+
+  </head>
+  <body
+    class=" bg-[#1a202c] text-white font-sans flex items-center justify-center min-h-screen">
+
+    <div class="bg-gray-800 p-8 rounded max-w-md w-full">
+      <h1 class="text-3xl mb-6 text-center font-bold">Create an Account</h1>
+      <form id="registerForm" class="space-y-4">
+        <div>
+          <label for="username" class="block mb-1">Username</label>
+          <input id="username" type="text" required
+            class="w-full p-2 rounded bg-gray-700 focus:outline-none" />
+        </div>
+        <div>
+          <label for="password" class="block mb-1">Password</label>
+          <input id="password" type="password" required
+            class="w-full p-2 rounded bg-gray-700 focus:outline-none" />
+        </div>
+        <div>
+          <label for="confirmPassword" class="block mb-1">Repeat
+            Password</label>
+          <input id="confirmPassword" type="password" required
+            class="w-full p-2 rounded bg-gray-700 focus:outline-none" />
+        </div>
+        <button type="submit"
+          class="w-full bg-blue-600 py-2 rounded hover:bg-blue-700 transition">
+          Register
+        </button>
+      </form>
+      <p class="mt-4 text-center text-gray-400">
+        Already have an account? <a href="login.html"
+          class="text-blue-400 hover:underline">Login</a>
+      </p>
+
+    </div>
+    <script src="js/Register.js"></script>
+
+  </body>
+
+  <footer class="text-center text-gray-500 mt-8">
+    <p class="text-sm">© 2025 LevelUp Motivation v2.1.0 © DelanoDaylinq</p>
+  </footer>
+
+</html>
