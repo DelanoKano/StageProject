@@ -1,7 +1,7 @@
 // Check logged in user & show welcome, else redirect
 const user = JSON.parse(localStorage.getItem('loggedInUser'));
 if (user && user.username) {
-  document.getElementById('welcomeMsg').textContent = `👋 Welcome back, ${user.username}!`;
+  document.getElementById('welcomeMsg').textContent = `👋 Welcome, ${user.username}!`;
 } else {
   window.location.href = 'index.html';
 }
