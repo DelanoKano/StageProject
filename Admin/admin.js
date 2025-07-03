@@ -1,7 +1,7 @@
 document.getElementById("logoutBtn").addEventListener("click", () => {
   localStorage.removeItem("loggedInUser");
   alert("You have been logged out.");
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 });
 
 // XP/Level system

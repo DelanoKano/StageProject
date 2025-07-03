@@ -3,14 +3,14 @@ const user = JSON.parse(localStorage.getItem('loggedInUser'));
 if (user && user.username) {
   document.getElementById('welcomeMsg').textContent = `👋 Welcome back, ${user.username}!`;
 } else {
-  window.location.href = 'login.html';
+  window.location.href = 'index.html';
 }
 
 // Logout functionality
 document.getElementById('logoutBtn').addEventListener('click', () => {
   localStorage.removeItem('loggedInUser');
   alert('You have been logged out.');
-  window.location.href = 'login.html';
+  window.location.href = 'index.html';
 });
 
 // XP/Level system
